@@ -4,7 +4,7 @@
     <b-tabs card>
       <b-tab title="Listar" active>
         <b-card-text>
-          <Table :data="texto" />
+          <Table :data="texto" :detalle="detalle"/>
         </b-card-text>
       </b-tab>
       <b-tab title="Crear">
@@ -34,7 +34,8 @@ export default {
     data(){
         return{
             texto:"",
-            prueba:"aqui"
+            detalle:""
+            
         }
     },
     mounted: function(){
@@ -42,8 +43,9 @@ export default {
                 },
                 (response) => {                    
                     console.log( response)
-                    this.texto = response.Orcid;
-            });  
+                    this.texto = response.Orcid.data;
+        });  
+        
     }
 }
 </script>
