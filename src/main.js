@@ -45,6 +45,18 @@ Vue.prototype._AjaxRequest = {
           body:{}
           
       },
+      "DELETE":{ 
+        name:"DELETE",
+          // Adding method type 
+          method: "DELETE",           
+          // Adding headers to the request 
+          headers: { 
+              "Content-type": "application/json; charset=UTF-8"            
+          },
+          // Adding body to the request 
+          body:{}
+          
+      },
       "POST_FILE":{ 
         name:"POST_FILE",
         // Adding method type 
@@ -73,7 +85,7 @@ Vue.prototype._AjaxRequest = {
     this._API_ROUTES.forEach(api_route => {
       if (api_route.name == pathname){
         header =  this._HEADERS[type_request];
-        if(header.name == "POST" && data != undefined)
+        if((header.name == "POST" || header.name == "DELETE") && data != undefined)
         {
           header.body = JSON.stringify(data) 
         }    
