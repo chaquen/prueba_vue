@@ -3,10 +3,12 @@
   <b-card no-body>
     <b-tabs card>
       <b-tab title="Listar" active>
-        <b-card-text><Table  /></b-card-text>
+        <b-card-text>
+          <Table :data="texto" />
+        </b-card-text>
       </b-tab>
       <b-tab title="Crear">
-        <b-card-text> {{texto}}  </b-card-text>
+        <b-card-text>  {{texto}}  </b-card-text>
       </b-tab>
     </b-tabs>
   </b-card>
@@ -22,7 +24,8 @@ export default {
     },
     data(){
         return{
-            texto:""
+            texto:"",
+            prueba:"aqui"
         }
     },
     mounted: function(){
@@ -30,7 +33,7 @@ export default {
                 },
                 (response) => {                    
                     console.log( response)
-                  this.texto = response
+                    this.texto = response.Orcid;
             });  
     }
 }

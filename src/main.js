@@ -17,7 +17,7 @@ Vue.config.productionTip = false
 
 Vue.prototype._AjaxRequest = {
   _DEBUG:env._ENV_DEBUG,
-   _URL_ROOT: env._ENV_URL_ROOT,  
+  _URL_ROOT: env._ENV_URL_ROOT,  
   _MESSAGE_RESPONSE: {
     message:"",
     code:0
