@@ -42,7 +42,7 @@ export default {
                 },
                 (response) => {                    
                     console.log( response)
-                    this.texto = response.Orcid;
+                    this.texto = response.Orcid.data;
             });  
     }
 }
