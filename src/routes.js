@@ -3,15 +3,20 @@ const route_list =
 [
     
     {
-     "name":"prueba_name",
+     "name":"listarOrcid",
      "type_request" : "GET",
-     "path":"prueba"
+     "path":"orcid/list"
     }, 
     {
-      "name":"prueba_json",
-      "type_request" : "GET",
-      "path":"prueba2"
-    },     
+      "name":"crearOrcid",
+      "type_request" : "POST",
+      "path":"orcid/create"
+    },
+    {
+      "name":"eliminarOrcid",
+      "type_request" : "DELETE",
+      "path":"orcid/delete"
+    },      
    
 ];
 
